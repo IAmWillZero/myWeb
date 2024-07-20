@@ -346,6 +346,27 @@ h6 {
   bottom: 15px;
 }
 
+/* Posiciona el botón en la parte derecha */
+#language-btn {
+  width: 44px;
+  height: 44px;
+  position: fixed;
+  right: 20px; /* Ajusta la distancia desde el borde derecho */
+  bottom: 80px; /* Ajusta la distancia desde el borde inferior */
+  background-color: #f8f9fa; /* Fondo claro para el botón */
+  border: 1px solid #ccc; /* Borde del botón */
+  border-radius: 50px; /* Forma redonda */
+  padding: 10px; /* Espaciado dentro del botón */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para mejor visibilidad */
+  z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+
+/* Opcional: Ajuste en el hover del botón */
+#language-btn:hover {
+  background-color: #e9ecef; /* Color de fondo al pasar el cursor */
+}
+
+
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
