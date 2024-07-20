@@ -22,7 +22,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #45505b; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #0563bb; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #063264; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --contrast-color: #ffffff; /* The contrast color is used for elements when the background color is one of the heading, accent, or default colors. Its purpose is to ensure proper contrast and readability when placed over these more dominant colors */
 }
 
@@ -53,6 +53,7 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+
 }
 
 a {
@@ -454,11 +455,12 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  --background-color: #fff;
+  --background-color: #ffffff;
   width: 100%;
   min-height: 100vh;
   position: relative;
   padding: 80px 0;
+  background-color: var(--background-color); /* Asegúrate de usar la variable para el color de fondo */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -484,7 +486,12 @@ section,
 
 .hero .container {
   position: relative;
-  z-index: 3;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho del .hero */
+  height: 100%; /* Asegura que el contenedor ocupe toda la altura del .hero */
 }
 
 .hero h2 {
