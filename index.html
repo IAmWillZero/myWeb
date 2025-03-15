@@ -167,14 +167,44 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4 portfolio-container">
           <div class="col-lg-4 col-md-6 portfolio-item">
-            <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4 class="lang" lang="en">App 1</h4>
-              <h4 class="lang" lang="es">App 1</h4>
-              <p class="lang" lang="en">App</p>
-              <p class="lang" lang="es">App</p>
-              <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bi bi-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
+            <div class="card-custom">
+              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4 class="lang" lang="en">App 1</h4>
+                <h4 class="lang" lang="es">App 1</h4>
+                <p class="lang" lang="en">App</p>
+                <p class="lang" lang="es">App</p>
+                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bi bi-plus"></i></a>
+                <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
+              </div>
+            </div>
+          </div><!-- /Portfolio Item -->
+
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <div class="card-custom">
+              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4 class="lang" lang="en">Web Development</h4>
+                <h4 class="lang" lang="es">Desarrollo Web</h4>
+                <p class="lang" lang="en">Web</p>
+                <p class="lang" lang="es">Web</p>
+                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web Development"><i class="bi bi-plus"></i></a>
+                <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
+              </div>
+            </div>
+          </div><!-- /Portfolio Item -->
+
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <div class="card-custom">
+              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4 class="lang" lang="en">AI Project</h4>
+                <h4 class="lang" lang="es">Proyecto de IA</h4>
+                <p class="lang" lang="en">AI</p>
+                <p class="lang" lang="es">IA</p>
+                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="AI Project"><i class="bi bi-plus"></i></a>
+                <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
+              </div>
             </div>
           </div><!-- /Portfolio Item -->
           <!-- Add more portfolio items here -->
@@ -194,17 +224,63 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4">
           <div class="col-lg-4">
-            <div class="info-item d-flex">
+            <div class="info-item d-flex card-custom">
               <i class="bi bi-geo-alt"></i>
               <div>
                 <h4 class="lang" lang="en">Location:</h4>
                 <h4 class="lang" lang="es">Ubicación:</h4>
-                <p class="lang" lang="en">A108 Adam Street, New York, NY 535022</p>
-                <p class="lang" lang="es">A108 Adam Street, New York, NY 535022</p>
+                <p class="lang" lang="en">Huaraz, nicrupampa</p>
+                <p class="lang" lang="es">Huaraz, nicrupampa</p>
               </div>
             </div>
           </div><!-- /Info Item -->
-          <!-- Add more contact info items here -->
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex card-custom">
+              <i class="bi bi-envelope"></i>
+              <div>
+                <h4 class="lang" lang="en">Email:</h4>
+                <h4 class="lang" lang="es">Correo:</h4>
+                <p>williams@example.com</p>
+              </div>
+            </div>
+          </div><!-- /Info Item -->
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex card-custom">
+              <i class="bi bi-phone"></i>
+              <div>
+                <h4 class="lang" lang="en">Call:</h4>
+                <h4 class="lang" lang="es">Llamar:</h4>
+                <p>+1 555 123 4567</p>
+              </div>
+            </div>
+          </div><!-- /Info Item -->
+
+          <div class="col-lg-12 mt-5">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit" class="custom-btn">Send Message</button></div>
+            </form>
+          </div>
         </div>
       </div>
     </section><!-- /Contact Section -->
@@ -214,11 +290,27 @@
   <!-- Footer -->
   <footer id="footer" class="footer">
     <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Williams</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        Designed by <a href="#">BootstrapMade</a>
+      <div class="row">
+        <div class="col-lg-6">
+          <h3>Williams</h3>
+          <p class="lang" lang="en">Passionate about technology and innovation.</p>
+          <p class="lang" lang="es">Apasionado por la tecnología y la innovación.</p>
+          <div class="social-links">
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-github"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="copyright mt-4">
+            &copy; Copyright <strong><span>Williams</span></strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            Designed by <a href="#">BootstrapMade</a>
+          </div>
+        </div>
       </div>
     </div>
   </footer><!-- /Footer -->

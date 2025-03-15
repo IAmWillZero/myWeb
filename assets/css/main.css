@@ -19,25 +19,27 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #45505b; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #063264; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --contrast-color: #ffffff; /* The contrast color is used for elements when the background color is one of the heading, accent, or default colors. Its purpose is to ensure proper contrast and readability when placed over these more dominant colors */
+  --background-color: #f7f7f7; /* Gris muy claro para el fondo */
+  --default-color: #333333; /* Gris oscuro para el texto principal */
+  --heading-color: #1a1a1a; /* Casi negro para titulares */
+  --accent-color: #FF8C00; /* Naranja para elementos de acento y destacados */
+  --secondary-color: #555555; /* Gris medio para elementos secundarios */
+  --contrast-color: #ffffff; /* Blanco para contraste en fondos oscuros */
+  --dark-bg-color: #222222; /* Fondo oscuro para secciones alternativas */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #45505b;  /* The default color of the main navmenu links */
-  --nav-hover-color: #0563bb; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #0563bb; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #1a1a1a;  /* Color de los enlaces de navegación */
+  --nav-hover-color: #FF8C00; /* Color naranja al pasar el cursor */
+  --nav-dropdown-background-color: #ffffff; 
+  --nav-dropdown-color: #333333;
+  --nav-dropdown-hover-color: #FF8C00;
 }
 
 /* Template Custom Colors */
 :root {
-  --header-background-color: #040b14;
+  --header-background-color: #1a1a1a; /* Fondo negro para el header */
   --header-color: #ffffff;
 }
 
@@ -218,63 +220,63 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  --background-color: color-mix(in srgb, var(--default-color), transparent 97%);
-  color: var(--default-color);
-  background-color: var(--background-color);
-  font-size: 14px;
-  text-align: center;
-  padding: 30px 0;
+  background-color: var(--dark-bg-color);
+  color: var(--contrast-color);
+  padding: 60px 0 30px;
   position: relative;
 }
 
 .footer h3 {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 700;
-  position: relative;
-  padding: 0;
-  margin: 0 0 15px 0;
+  color: var(--accent-color);
+  margin-bottom: 20px;
 }
 
 .footer p {
-  font-size: 15;
-  font-style: italic;
-  padding: 0;
-  margin: 0 0 30px 0;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .footer .social-links {
-  margin: 0 0 30px 0;
+  margin-bottom: 30px;
 }
 
 .footer .social-links a {
-  font-size: 16px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  line-height: 1;
-  margin: 0 4px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
+  color: var(--contrast-color);
+  margin-right: 10px;
+  transition: all 0.3s ease;
 }
 
 .footer .social-links a:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
-  text-decoration: none;
+  background: var(--accent-color);
+  transform: translateY(-3px);
 }
 
 .footer .copyright {
-  padding-top: 25px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer .credits {
-  font-size: 13px;
-  padding-top: 5px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 10px;
+}
+
+.footer .credits a {
+  color: var(--accent-color);
+  transition: all 0.3s ease;
 }
 
 /*--------------------------------------------------------------
@@ -317,55 +319,54 @@ h6 {
 --------------------------------------------------------------*/
 .scroll-top {
   position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 15px;
-  bottom: -15px;
-  z-index: 99999;
-  background-color: var(--accent-color);
-  width: 44px;
-  height: 44px;
-  border-radius: 50px;
-  transition: all 0.4s;
-}
-
-.scroll-top i {
-  font-size: 24px;
+  right: 25px;
+  bottom: 25px;
+  width: 50px;
+  height: 50px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--contrast-color);
-  line-height: 0;
-}
-
-.scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
-  color: var(--contrast-color);
+  z-index: 99;
+  transform: translateY(100px);
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 .scroll-top.active {
-  visibility: visible;
-  opacity: 1;
-  bottom: 15px;
+  transform: translateY(0);
+}
+
+.scroll-top:hover {
+  background: var(--heading-color);
+  color: var(--contrast-color);
+  transform: translateY(-5px);
 }
 
 /* Posiciona el botón en la parte derecha */
 #language-btn {
-  width: 44px;
-  height: 44px;
   position: fixed;
-  right: 20px; /* Ajusta la distancia desde el borde derecho */
-  bottom: 80px; /* Ajusta la distancia desde el borde inferior */
-  background-color: #f8f9fa; /* Fondo claro para el botón */
-  border: 1px solid #ccc; /* Borde del botón */
-  border-radius: 50px; /* Forma redonda */
-  padding: 10px; /* Espaciado dentro del botón */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para mejor visibilidad */
-  z-index: 1000; /* Asegura que esté encima de otros elementos */
+  right: 25px;
+  bottom: 85px;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
 }
 
-/* Opcional: Ajuste en el hover del botón */
 #language-btn:hover {
-  background-color: #e9ecef; /* Color de fondo al pasar el cursor */
+  background: var(--heading-color);
+  transform: translateY(-3px);
 }
 
+#language-btn i {
+  margin-right: 5px;
+}
 
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
@@ -435,24 +436,22 @@ section,
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  color: var(--heading-color);
   position: relative;
+  margin-bottom: 30px;
 }
 
 .section-title h2:before {
-  content: "";
+  content: '';
   position: absolute;
   display: block;
-  width: 160px;
-  height: 1px;
-  background: color-mix(in srgb, var(--default-color), transparent 60%);
-  left: 0;
-  right: 0;
-  bottom: 1px;
-  margin: auto;
+  width: 70px;
+  height: 3px;
+  background: var(--accent-color);
+  bottom: -10px;
+  left: calc(50% - 35px);
 }
 
 .section-title h2::after {
@@ -480,11 +479,13 @@ section,
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding: 80px 0;
+  padding: 140px 0;
   background-color: var(--background-color); /* Asegúrate de usar la variable para el color de fondo */
   display: flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(rgba(34, 34, 34, 0.9), rgba(34, 34, 34, 0.9)), url("../img/hero-bg.jpg") center center;
+  background-size: cover;
 }
 
 .hero img {
@@ -516,9 +517,10 @@ section,
 }
 
 .hero h2 {
-  margin: 0;
-  font-size: 64px;
+  color: var(--contrast-color);
+  font-size: 3rem;
   font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .hero p {
@@ -527,8 +529,8 @@ section,
 }
 
 .hero p span {
-  letter-spacing: 1px;
-  border-bottom: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  font-weight: 700;
 }
 
 .hero .social-links {
@@ -541,11 +543,15 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   line-height: 1;
   margin-right: 20px;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
 }
 
 .hero .social-links a:hover {
   color: var(--accent-color);
+  background: var(--accent-color);
+  transform: translateY(-3px);
 }
 
 @media (max-width: 768px) {
@@ -769,59 +775,52 @@ section,
 }
 
 .portfolio .portfolio-item {
-  position: relative;
+  margin-bottom: 30px;
   overflow: hidden;
 }
 
+.portfolio .portfolio-item .card-custom {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.portfolio .portfolio-item img {
+  transition: all 0.6s ease;
+}
+
+.portfolio .portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
 .portfolio .portfolio-item .portfolio-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(26, 26, 26, 0.9) 0%, rgba(26, 26, 26, 0) 100%);
+  padding: 20px;
   opacity: 0;
-  position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: -100%;
-  z-index: 3;
-  transition: all ease-in-out 0.5s;
-  background: color-mix(in srgb, var(--background-color), transparent 10%);
-  padding: 15px;
-}
-
-.portfolio .portfolio-item .portfolio-info h4 {
-  font-size: 18px;
-  font-weight: 600;
-  padding-right: 50px;
-}
-
-.portfolio .portfolio-item .portfolio-info p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  font-size: 14px;
-  margin-bottom: 0;
-  padding-right: 50px;
-}
-
-.portfolio .portfolio-item .portfolio-info .preview-link,
-.portfolio .portfolio-item .portfolio-info .details-link {
-  position: absolute;
-  right: 50px;
-  font-size: 24px;
-  top: calc(50% - 14px);
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  transition: 0.3s;
-  line-height: 0;
-}
-
-.portfolio .portfolio-item .portfolio-info .preview-link:hover,
-.portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: var(--accent-color);
-}
-
-.portfolio .portfolio-item .portfolio-info .details-link {
-  right: 14px;
-  font-size: 28px;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
 }
 
 .portfolio .portfolio-item:hover .portfolio-info {
   opacity: 1;
-  bottom: 0;
+  transform: translateY(0);
+}
+
+.portfolio .portfolio-info h4 {
+  font-size: 18px;
+  color: var(--contrast-color);
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.portfolio .portfolio-info p {
+  color: var(--accent-color);
+  font-size: 14px;
+  margin: 0;
 }
 
 /*--------------------------------------------------------------
@@ -1040,37 +1039,39 @@ section,
   margin-top: 40px;
 }
 
+.contact .info-item {
+  padding: 30px;
+}
+
 .contact .info-item i {
+  font-size: 28px;
   color: var(--accent-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 92%);
-  font-size: 20px;
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 50px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 140, 0, 0.1);
   margin-right: 15px;
-}
-
-.contact .info-item h3 {
-  font-size: 20px;
-  padding: 0;
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 5px;
-}
-
-.contact .info-item p {
-  padding: 0;
-  margin-bottom: 0;
-  font-size: 14px;
+  transition: all 0.3s ease;
 }
 
 .contact .info-item:hover i {
   background: var(--accent-color);
   color: var(--contrast-color);
+}
+
+.contact .info-item h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 5px;
+}
+
+.contact .info-item p {
+  font-size: 15px;
+  color: var(--default-color);
 }
 
 .contact .php-email-form {
@@ -1144,14 +1145,17 @@ section,
 .contact .php-email-form button[type=submit] {
   color: var(--contrast-color);
   background: var(--accent-color);
-  border: 0;
-  padding: 10px 30px;
-  transition: 0.4s;
-  border-radius: 50px;
+  border: none;
+  padding: 15px 30px;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  border: 2px solid var(--accent-color);
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 25%);
+  background: transparent;
+  color: var(--accent-color);
 }
 
 @keyframes animate-loading {
@@ -1473,4 +1477,121 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+/* Secciones alternando fondos */
+.section {
+  padding: 90px 0;
+  position: relative;
+}
+
+section:nth-child(odd) {
+  background-color: var(--background-color);
+}
+
+section:nth-child(even) {
+  background-color: var(--contrast-color);
+}
+
+/* Estilo para títulos de sección */
+.section-title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.section-title h2:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: var(--accent-color);
+  bottom: -10px;
+  left: calc(50% - 35px);
+}
+
+/* Botones personalizados */
+.custom-btn {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border: 2px solid var(--accent-color);
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+  background: transparent;
+  color: var(--accent-color);
+}
+
+/* Tarjetas con sombras y efecto hover */
+.card-custom {
+  background: var(--contrast-color);
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.card-custom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Personalización para formularios */
+.form-control {
+  padding: 12px 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  background: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.25);
+}
+
+/* Animaciones para elementos al hacer scroll */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Estilos responsivos para dispositivos móviles */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+  
+  .section-title h2 {
+    font-size: 2rem;
+  }
+  
+  .footer {
+    text-align: center;
+  }
+  
+  .footer .social-links {
+    justify-content: center;
+    display: flex;
+  }
+  
+  .footer .copyright, .footer .credits {
+    text-align: center;
+    padding-top: 15px;
+    margin-top: 15px;
+  }
 }
